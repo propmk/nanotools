@@ -1,0 +1,17 @@
+:root {
+    --duration: 0.3s;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --duration: 0s;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
