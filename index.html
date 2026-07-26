@@ -9,7 +9,8 @@
 </head>
 <body>
     
-<section id="toolboard" class="toolboard-hero">
+<div class="wrap">
+  <section id="toolboard" class="toolboard-hero">
     <div class="section-head">
       <div class="eyebrow">toolboard</div>
       <h2>Pick a tool.</h2>
@@ -47,6 +48,120 @@
       </button>
     </div>
   </section>
+
+  <div id="bench">
+    <div class="bench-head">
+      <div class="bench-title">
+        <span class="code" id="benchCode">T00</span>
+        <h3 id="benchName">Tool</h3>
+      </div>
+      <button class="back-btn" id="backBtn" type="button">← back to toolboard</button>
+    </div>
+
+    <section class="tool-pane" id="tool-t01" hidden>
+      <div class="panel-card">
+        <div class="drop" id="t01drop"><input type="file" id="t01input" accept="image/*">Drop an image here, or click to choose one</div>
+        <div id="t01work" hidden>
+          <div class="row">
+            <div class="field"><label>width</label><input type="number" id="t01w"></div>
+            <div class="field"><label>height</label><input type="number" id="t01h"></div>
+            <div class="field"><label>lock ratio</label><input type="checkbox" id="t01lock" checked style="width:18px;height:18px;"></div>
+          </div>
+          <div class="row"><canvas class="preview" id="t01canvas"></canvas></div>
+          <div class="row">
+            <button class="btn primary" id="t01go" type="button">Resize</button>
+            <span class="stat" id="t01stat"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-pane" id="tool-t02" hidden>
+      <div class="panel-card">
+        <div class="drop" id="t02drop"><input type="file" id="t02input" accept="image/*">Drop an image here, or click to choose one</div>
+        <div id="t02work" hidden>
+          <canvas class="preview" id="t02canvas" style="max-height:280px;"></canvas>
+          <div class="row" style="margin-top:16px;">
+            <div class="field"><label>output format</label>
+              <select id="t02fmt">
+                <option value="image/png">PNG</option>
+                <option value="image/jpeg">JPEG</option>
+                <option value="image/webp">WebP</option>
+              </select>
+            </div>
+            <div class="field"><label>quality</label><input type="range" id="t02q" min="10" max="100" value="90" style="width:140px;"></div>
+          </div>
+          <div class="row"><button class="btn primary" id="t02go" type="button">Convert & Download</button><span class="stat" id="t02stat"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-pane" id="tool-t03" hidden>
+      <div class="panel-card">
+        <textarea id="t03in" placeholder='Paste JSON here, e.g. {"a":1,"b":[1,2,3]}'></textarea>
+        <div class="row" style="margin-top:12px;">
+          <button class="btn primary" id="t03fmt" type="button">Format</button>
+          <button class="btn" id="t03min" type="button">Minify</button>
+          <span class="stat" id="t03stat"></span>
+        </div>
+        <textarea id="t03out" placeholder="Output appears here…"></textarea>
+      </div>
+    </section>
+
+    <section class="tool-pane" id="tool-t04" hidden>
+      <div class="panel-card">
+        <div class="row">
+          <div class="field"><label>algorithm</label>
+            <select id="t04alg">
+              <option value="SHA-1">SHA-1</option>
+              <option value="SHA-256" selected>SHA-256</option>
+              <option value="SHA-384">SHA-384</option>
+              <option value="SHA-512">SHA-512</option>
+            </select>
+          </div>
+        </div>
+        <textarea id="t04text" placeholder="Type or paste text to hash…"></textarea>
+        <div class="row" style="margin:12px 0;">
+          <button class="btn primary" id="t04hashtext" type="button">Hash text</button>
+          <span class="stat">— or —</span>
+          <div class="drop" id="t04drop" style="flex:1; margin:0; padding:14px;"><input type="file" id="t04input">hash a file instead</div>
+        </div>
+        <textarea id="t04out" readonly placeholder="Digest appears here…"></textarea>
+        <div class="row" style="margin-top:10px;"><button class="btn" id="t04copy" type="button">Copy</button></div>
+      </div>
+    </section>
+
+    <section class="tool-pane" id="tool-t05" hidden>
+      <div class="panel-card">
+        <textarea id="t05in" placeholder="Paste CSV (with header row) or JSON array here…"></textarea>
+        <div class="row" style="margin:12px 0;">
+          <button class="btn primary" id="t05toJson" type="button">CSV → JSON</button>
+          <button class="btn" id="t05toCsv" type="button">JSON → CSV</button>
+          <button class="btn" id="t05dl" type="button">Download output</button>
+        </div>
+        <textarea id="t05out" placeholder="Output appears here…"></textarea>
+      </div>
+    </section>
+
+    <section class="tool-pane" id="tool-t06" hidden>
+      <div class="panel-card">
+        <textarea id="t06in" placeholder="Type or paste text…" style="min-height:180px;"></textarea>
+        <div class="row" style="margin-top:12px;">
+          <span class="stat">chars: <b id="t06chars">0</b></span>
+          <span class="stat">words: <b id="t06words">0</b></span>
+          <span class="stat">sentences: <b id="t06sent">0</b></span>
+          <span class="stat">lines: <b id="t06lines">0</b></span>
+        </div>
+        <div class="row" style="margin-top:6px;">
+          <button class="btn" id="t06upper" type="button">UPPERCASE</button>
+          <button class="btn" id="t06lower" type="button">lowercase</button>
+          <button class="btn" id="t06title" type="button">Title Case</button>
+          <button class="btn" id="t06sentence" type="button">Sentence case</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
 
     
 </body>
