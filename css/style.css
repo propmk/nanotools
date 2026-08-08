@@ -30,7 +30,7 @@ html{
 
 body{
   margin: 0;
-  background: url("../background.png") center/cover no-repeat, var(--bg);
+  background: url("../asset/background.png") center/cover no-repeat, var(--bg);
   background-attachment: fixed;
   color: var(--ink);
   font-family: var(--font-sans);
