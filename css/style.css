@@ -184,7 +184,7 @@ textarea,
   border-radius: var(--radius);
   background: rgba(20, 29, 28, 0.88);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
-  cursor: url("../screwdriver.png"), auto;
+  cursor: url("../asset/screwdriver.png"), auto;
 }
 
 .section-head{
@@ -216,7 +216,7 @@ textarea,
   gap: 8px;
   padding: 18px;
   background: var(--panel);
-  cursor: url("../screwdriver.png"), auto;
+  cursor: url("../asset/screwdriver.png"), auto;
   text-align: left;
 }
 
@@ -250,11 +250,11 @@ textarea,
 
 #bench.open{
   display: block;
-  cursor: url("../manifyingGlass.png"), auto;
+  cursor: url("../asset/manifyingGlass.png"), auto;
 }
 
 .tool-pane{
-  cursor: url("../manifyingGlass.png"), auto;
+  cursor: url("../asset/manifyingGlass.png"), auto;
 }
 
 .bench-head{
@@ -310,7 +310,7 @@ textarea,
   color: var(--dim);
   font-size: 13px;
   text-align: center;
-  cursor: url("../manifyingGlass.png"), auto;
+  cursor: url("../asset/manifyingGlass.png"), auto;
 }
 
 .drop:hover,
