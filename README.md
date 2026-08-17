@@ -1,2 +1,3 @@
-<h1>Nanotools: Instruments that never leave your browser.</h1>
-<p>Processed on device - No accounts, No uploads, No analytics</p>
+<h1>Nanotools</h1>
+<p>Instruments that never leave your browser. Processed on device.<br>
+<strong>No accounts, No uploads, No analytics</strong></p>
